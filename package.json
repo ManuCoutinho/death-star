@@ -1,0 +1,48 @@
+{
+  "name": "death-star",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint --ext .js -f ./node_modules/eslint-friendly-formatter . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manucoutinho/"
+  },
+  "keywords": [
+    "nodejs",
+    "azure",
+    "aswa",
+    "azure-web-static-web-apps",
+    "javascript",
+    "express"
+  ],
+  "author": "Emanuela Coutinho",
+  "license": "MIT License",
+  "description": "Star Wars intro for4fun",
+  "bugs": {
+    "url": "https://github.com/manucoutinho/"
+  },
+  "homepage": "https://github.com/manucout",
+  "dependencies": {
+    "eslint-friendly-formatter": "^4.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "husky": "^8.0.1"
+  },
+  "husky": {
+    "pre-commit": "lint-staged",
+    "pre-push": "npm run lint"
+  },
+  "lint-stage": {
+    ".js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
